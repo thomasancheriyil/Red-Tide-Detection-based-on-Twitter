@@ -16,9 +16,9 @@ Steps 2) and 3) are implemented in Python, file geocode.py. The input files shou
 For training, the "<name>_labels.txt" files are needed that specify whether the tweet is relevant or irrelevant. The Java Annotation files may be useful for easy labelling of tweets. For prediction, the labels can be left blank for the tweets.
 ### Classification
 The classification component performs the following actions:
-1. converts texts to Word2Vec vectors,
-2. converts TXT files to ARFF format,
-3. builds an SVM model based the training data,
+1. converts texts to Word2Vec vectors
+2. converts TXT files to ARFF format
+3. builds an SVM model based the training data
 4. classifies Word2Vec vectors based on the given model.
 
 Step 1) is implemented in Python, file generate_w2v.py. It expects GoogleNews-vectors-negative300.bin from the word2vec project available here: https://code.google.com/p/word2vec/. Note, that the GoogleNews-vectors-negative300.bin.gz file should be uncompressed. This module uses word2vec implementation from the gensim library, which is available here: https://radimrehurek.com/gensim/models/word2vec.html. It expects input files named as "<name>_labels.txt", e.g. "sample_train_labels.txt" and "sample_test_labels.txt". It also expects "<name>.txt" containing the JSON data, e.g. "sample_train.txt" and the geo-tagged data in "<name>_geo.txt", e.g. "sample_train_geo.txt". The program generates output files named as "<name>_w2v.txt".
