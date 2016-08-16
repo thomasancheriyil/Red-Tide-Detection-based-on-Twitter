@@ -1,0 +1,10 @@
+/bin/
+/target/
+.metadata
+.settings
+.project
+.classpath
+*.arff
+*_class.txt
+*_w2v.txt
+*.model
