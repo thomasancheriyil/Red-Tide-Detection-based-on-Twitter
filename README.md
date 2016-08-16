@@ -3,6 +3,7 @@
 
 * This is implemented in Python, file twitterGapDownload.py. The search terms and time period over which the search must be done is entered in "url" variable. The results are stored in timestamped html files.
 * The html data is then parsed into JSON files using Python file, twitterGapParse.py. The tweet text, stream type and tweet id are extracted into JSON files. The JSON files are then renamed as "<name>_train.txt" or "<name>_test.txt" before geotagging and classification are done.
+
 ### Geo-tagging
 The geotagging component performs the following actions:
 
